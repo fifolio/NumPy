@@ -64,3 +64,21 @@ Access 3-D Arrays
 Negative Indexing
 * Use negative indexing to access an array from the end.
 
+NumPy Array Slicing
+
+Slicing arrays
+
+* Slicing in python means taking elements from one given index to another given index.
+* We pass slice instead of index like this: [start:end].
+* We can also define the step, like this: [start:end:step].
+* If we don't pass start its considered 0
+* If we don't pass end its considered length of array in that dimension
+* If we don't pass step its considered 1
+
+Note: The result includes the start index, but excludes the end index.
+
+Negative Slicing
+* Use the minus operator to refer to an index from the end:
+
+STEP
+* Use the step value to determine the step of the slicing:
