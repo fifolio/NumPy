@@ -105,4 +105,51 @@ arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 
 # From both elements, slice index 1 to index 4 (not included), this will return a 2-D array:
 arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
-print(arr[0:2, 1:4])
+# print(arr[0:2, 1:4])
+
+# Get the data type of an array object:
+arr = np.array([1, 2, 3, 4])
+# print(arr.dtype)
+
+# Get the data type of an array containing strings:
+arr = np.array(['v1', 'v2', 'v3', 'v4'])
+# print(arr.dtype)
+
+# Create an array with data type string:
+arr = np.array([1, 2, 3, 4], dtype='S')
+# print(arr)
+# print(arr.dtype)
+
+# Create an array with data type 4 bytes integer:
+arr = np.array([1, 2, 3, 4], dtype='i4')
+# print(arr)
+# print(arr.dtype)
+
+# A non integer string like 'a' can not be converted to integer (will raise an error):
+# arr = np.array(['a', '2', '3'], dtype='i')
+# print(arr.dtype)
+
+# Change data type from float to integer by using 'i' as parameter value:
+arr = np.array([1.1, 2.1, 3.1])
+
+newarr = arr.astype('i')
+
+# print(newarr)
+# print(newarr.dtype)
+
+# Change data type from float to integer by using int as parameter value:
+
+arr = np.array([1.1, 2.1, 3.1])
+newarr = arr.astype(int)
+
+# print(newarr)
+# print(newarr.dtype)
+
+# Change data type from integer to boolean:
+arr = np.array([1, 0, 3])
+
+newarr = arr.astype(bool)
+
+print(newarr)
+print(newarr.dtype)
+

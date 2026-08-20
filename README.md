@@ -82,3 +82,68 @@ Negative Slicing
 
 STEP
 * Use the step value to determine the step of the slicing:
+
+NumPy Data Types
+
+* Below is a list of all data types in NumPy and the characters used to represent them.
+* 
+* i - integer
+* b - boolean
+* u - unsigned integer (has no representation for negative numbers.)
+* f - float
+* c - complex float
+* m - timedelta
+* M - datetime
+* O - object
+* S - string
+* U - unicode string (dtype="U5"))
+* V - fixed chunk of memory for other type ( void )
+
+If you explicitly create a NumPy array with dtype=np.uint8 and put a negative number in it, NumPy wraps the value around rather than storing the negative number.
+
+For example:
+
+```
+import numpy as np
+
+x = np.array([-1, 0, 1], dtype=np.uint8)
+
+print(x)
+```
+You may get:
+
+[255   0   1]
+
+Why does -1 become 255?
+
+Because uint8 can only represent:
+
+0 → 255
+
+So it uses arithmetic modulo 256:
+
+-1 mod 256 = 255
+
+Similarly:
+
+```
+np.array([-2, -1, 0, 1], dtype=np.uint8)
+```
+
+gives:
+
+[254 255   0   1]
+
+⚠️ Important: this behavior can depend on the NumPy version/context, and newer NumPy versions may raise an OverflowError for direct conversion of a Python negative integer to an unsigned dtype. So don't rely on negative → wraparound when writing new code.
+
+Checking the Data Type of an Array
+* The NumPy array object has a property called dtype that returns the data type of the array
+
+* For i, u, f, S and U we can define size as well.
+
+Converting Data Type on Existing Arrays
+* The best way to change the data type of an existing array, is to make a copy of the array with the astype() method.
+* 
+* The astype() function creates a copy of the array, and allows you to specify the data type as a parameter.
+* The data type can be specified using a string, like 'f' for float, 'i' for integer etc. or you can use the data type directly like float for float and int for integer.
+
