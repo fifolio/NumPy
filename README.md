@@ -143,7 +143,29 @@ Checking the Data Type of an Array
 
 Converting Data Type on Existing Arrays
 * The best way to change the data type of an existing array, is to make a copy of the array with the astype() method.
-* 
 * The astype() function creates a copy of the array, and allows you to specify the data type as a parameter.
 * The data type can be specified using a string, like 'f' for float, 'i' for integer etc. or you can use the data type directly like float for float and int for integer.
+
+NumPy Array Copy vs View
+
+The Difference Between Copy and View
+
+* The main difference between a copy and a view of an array is that the copy is a new array, and the view is just a view of the original array.
+* The copy owns the data and any changes made to the copy will not affect original array, and any changes made to the original array will not affect the copy.
+* The view does not own the data and any changes made to the view will affect the original array, and any changes made to the original array will affect the view.
+
+- The copy SHOULD NOT be affected by the changes made to the original array.
+
+- The view SHOULD be affected by the changes made to the original array.
+
+- The original array SHOULD be affected by the changes made to the view.
+
+Check if Array Owns its Data
+
+* As mentioned above, copies owns the data, and views does not own the data, but how can we check this?
+* Every NumPy array has the attribute base that returns None if the array owns the data.
+* Otherwise, the base  attribute refers to the original object.
+
+- The copy returns None.
+- The view returns the original array.
 
