@@ -177,3 +177,67 @@ Shape of an Array
 Get the Shape of an Array
 * NumPy arrays have an attribute called shape that returns a tuple with each index having the number of corresponding elements.
 
+NumPy Array Reshaping
+
+Reshaping arrays
+* Reshaping means changing the shape of an array.
+* The shape of an array is the number of elements in each dimension.
+* By reshaping we can add or remove dimensions or change number of elements in each dimension.
+
+Can We Reshape Into any Shape?
+* Yes, as long as the elements required for reshaping are equal in both shapes.
+* We can reshape an 8 elements 1D array into 4 elements in 2 rows 2D array but we cannot reshape it into a 3 elements 3 rows 2D array as that would require 3x3 = 9 elements.
+
+Unknown Dimension
+
+* You are allowed to have one "unknown" dimension.
+* Meaning that you do not have to specify an exact number for one of the dimensions in the reshape method.
+* Pass -1 as the value, and NumPy will calculate this number for you
+* Note: We can not pass -1 to more than one dimension.
+
+Flattening the arrays
+* Flattening array means converting a multidimensional array into a 1D array.
+* We can use reshape(-1) to do this.
+* Note: There are a lot of functions for changing the shapes of arrays in numpy flatten, ravel and also for rearranging the elements rot90, flip, fliplr, flipud etc.
+
+NumPy Array Iterating
+
+Iterating Arrays
+
+* Iterating means going through elements one by one.*
+* As we deal with multi-dimensional arrays in numpy, we can do this using basic for loop of python.*
+* If we iterate on a 1-D array it will go through each element one by one.
+* In a 2-D array it will go through all the rows.
+
+Iterating Arrays Using nditer()
+
+* The function nditer() is a helping function that can be used from very basic to very advanced iterations. It solves some basic issues which we face in iteration,
+
+Iterating Array With Different Data Types
+
+* We can use op_dtypes argument and pass it the expected datatype to change the datatype of elements while iterating.
+* NumPy does not change the data type of the element in-place (where the element is in array) so it needs some other space to perform this action, that extra space is called buffer, and in order to enable it in nditer() we pass flags=['buffered'].
+
+Iterating With Different Step Size
+* We can use filtering and followed by iteration.
+
+Enumerated Iteration Using ndenumerate()
+* Enumeration means mentioning sequence number of somethings one by one.
+* Sometimes we require corresponding index of the element while iterating, the ndenumerate() method can be used for those usecases.
+
+NumPy Joining Array
+
+* Joining means putting contents of two or more arrays in a single array.
+* In SQL we join tables based on a key, whereas in NumPy we join arrays by axes.
+* We pass a sequence of arrays that we want to join to the concatenate() function, along with the axis. If axis is not explicitly passed, it is taken as 0.
+
+Joining Arrays Using Stack Functions
+
+* Stacking is same as concatenation, the only difference is that stacking is done along a new axis.
+* We can concatenate two 1-D arrays along the second axis which would result in putting them one over the other, ie. stacking.
+* We pass a sequence of arrays that we want to join to the stack() method along with the axis. If axis is not explicitly passed it is taken as 0.
+* NumPy provides a helper function: hstack() to stack along rows.
+* NumPy provides a helper function: vstack()  to stack along columns.
+* NumPy provides a helper function: dstack() to stack along height, which is the same as depth.
+
+

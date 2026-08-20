@@ -195,5 +195,157 @@ arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 # Create an array with 5 dimensions using ndmin using a vector with values 1,2,3,4 and verify that last dimension has value 4:
 arr = np.array([1, 2, 3, 4], ndmin=5)
 
+# print(arr)
+# print('shape of array :', arr.shape)
+
+# Convert the following 1-D array with 12 elements into a 2-D array. The outermost dimension will have 4 arrays, each with 3 elements:
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+newarr = arr.reshape(4, 3)
+
+# print(newarr)
+
+# Convert the following 1-D array with 12 elements into a 3-D array. The outermost dimension will have 2 arrays that contains 3 arrays, each with 2 elements:
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+newarr = arr.reshape(2, 3, 2)
+
+# print(newarr)
+
+# Check if the returned array is a copy or a view:
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+# print(arr.reshape(2, 4).base) # The example above returns the original array, so it is a view.
+
+# Convert 1D array with 8 elements to 3D array with 2x2 elements:
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+newarr = arr.reshape(2, 1, -1)
+
+# print(newarr)
+
+# Convert the array into a 1D array:
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+newarr = arr.reshape(-1)
+
+# print(newarr)
+
+# Iterate on the elements of the following 1-D array:
+arr = np.array([1, 2, 3, 4, 5])
+for el in arr:
+    # print(el)
+    break
+
+# Iterate on the elements of the following 2-D array:
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+for el in arr:
+# print(el) # If we iterate on a n-D array it will go through n-1th dimension one by one.
+  break
+
+# Iterate on each scalar element of the 2-D array:
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# for x in arr:
+#   for y in x:
+#     print(y)
+
+# Iterate on the elements of the following 3-D array:
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+# for x in arr:
+#   print(x)
+
+# Iterate down to the scalars:
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+# for x in arr:
+#   for y in x:
+#     for z in y:
+#       print(z)
+
+# Iterate through the following 3-D array Using nditer():
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+# for x in np.nditer(arr):
+#   print(x)
+
+# Iterate through the array as a string:
+arr = np.array([1, 2, 3])
+
+# for x in np.nditer(arr, flags=['buffered'], op_dtypes=['S']):
+#   print(x)
+
+# Iterate through every scalar element of the 2D array skipping 1 element:
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+# for x in np.nditer(arr[:, ::2]):
+#   print(x)
+
+# Enumerate on following 1D arrays elements:
+arr = np.array([1, 2, 3])
+
+# for idx, x in np.ndenumerate(arr):
+#   print(idx, x)
+
+# Enumerate on following 2D array's elements:
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+# for idx, x in np.ndenumerate(arr):
+#   print(idx, x)
+
+# Join two arrays:
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.concatenate((arr1, arr2))
+
+# Join two 2-D arrays along rows (axis=1):
+arr1 = np.array([[1, 2], [3, 4]])
+
+arr2 = np.array([[5, 6], [7, 8]])
+
+arr = np.concatenate((arr1, arr2), axis=1)
+
+# print(arr)
+
+# Joining Arrays Using Stack Functions
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.stack((arr1, arr2), axis=1)
+
+# print(arr)
+
+# NumPy provides a helper function: hstack() to stack along rows.
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.hstack((arr1, arr2))
+
+# print(arr)
+
+# NumPy provides a helper function: vstack()  to stack along columns.
+
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.vstack((arr1, arr2))
+
+# print(arr)
+
+# NumPy provides a helper function: dstack() to stack along height, which is the same as depth.
+
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.dstack((arr1, arr2))
+
 print(arr)
-print('shape of array :', arr.shape)
