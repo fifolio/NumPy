@@ -327,3 +327,17 @@ Random Distribution
 * The choice() method allows us to specify the probability for each value.
 * The probability is set by a number between 0 and 1, where 0 means that the value will never occur and 1 means that the value will always occur.
 * The sum of all probability numbers should be 1.
+
+Random Permutations
+
+Random Permutations of Elements
+* A permutation refers to an arrangement of elements. e.g. [3, 2, 1] is a permutation of [1, 2, 3] and vice-versa.
+* The NumPy Random module provides two methods for this: shuffle() and permutation().
+
+Shuffling Arrays
+* Shuffle means changing arrangement of elements in-place. i.e. in the array itself.
+* The shuffle() method makes changes to the original array.
+
+* The permutation() method returns a re-arranged array (and leaves the original array un-changed).
+
+

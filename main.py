@@ -584,3 +584,15 @@ x = random.choice([3, 5, 7, 9], p=[0.1, 0.3, 0.6, 0.0], size=(3, 5))
 
 # print(x)
 
+# Randomly shuffle elements of following array:
+arr = np.array([1, 2, 3, 4, 5])
+
+random.shuffle(arr)
+
+# print(arr)
+
+# Generate a random permutation of elements of following array:
+arr = np.array([1, 2, 3, 4, 5])
+
+# print(random.permutation(arr))
+
