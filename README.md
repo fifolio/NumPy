@@ -311,3 +311,19 @@ Generate Random Number From Array
 * The choice() method allows you to generate a random value based on an array of values.
 * The choice() method takes an array as a parameter and randomly returns one of the values.
 * Add a size parameter to specify the shape of the array.
+
+Random Data Distribution
+
+* What is Data Distribution?
+* Data Distribution is a list of all possible values, and how often each value occurs.
+* Such lists are important when working with statistics and data science.
+* The random module offer methods that returns randomly generated data distributions.
+
+Random Distribution
+
+* A random distribution is a set of random numbers that follow a certain probability density function.
+* Probability Density Function: A function that describes a continuous probability. i.e. probability of all values in an array.
+* We can generate random numbers based on defined probabilities using the choice() method of the random module.
+* The choice() method allows us to specify the probability for each value.
+* The probability is set by a number between 0 and 1, where 0 means that the value will never occur and 1 means that the value will always occur.
+* The sum of all probability numbers should be 1.
