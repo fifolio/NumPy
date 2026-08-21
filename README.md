@@ -289,3 +289,25 @@ Filtering Arrays
 * In NumPy, you filter an array using a boolean index list.
 * A boolean index list is a list of booleans corresponding to indexes in the array.
 * If the value at an index is True that element is contained in the filtered array, if the value at that index is False that element is excluded from the filtered array.
+
+Random Numbers in NumPy
+
+Generate Random Number
+* NumPy offers the random module to work with random numbers.
+
+Generate Random Float
+* The random module's rand() method returns a random float between 0 and 1.
+
+Generate Random Array
+* In NumPy we work with arrays, and you can use the two methods from the above examples to make random arrays.
+
+Integers
+* The randint() method takes a size parameter where you can specify the shape of an array.
+
+Floats
+* The rand() method also allows you to specify the shape of the array.
+
+Generate Random Number From Array
+* The choice() method allows you to generate a random value based on an array of values.
+* The choice() method takes an array as a parameter and randomly returns one of the values.
+* Add a size parameter to specify the shape of the array.
