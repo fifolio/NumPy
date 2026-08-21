@@ -331,7 +331,6 @@ arr = np.hstack((arr1, arr2))
 # print(arr)
 
 # NumPy provides a helper function: vstack()  to stack along columns.
-
 arr1 = np.array([1, 2, 3])
 
 arr2 = np.array([4, 5, 6])
@@ -341,11 +340,103 @@ arr = np.vstack((arr1, arr2))
 # print(arr)
 
 # NumPy provides a helper function: dstack() to stack along height, which is the same as depth.
-
 arr1 = np.array([1, 2, 3])
 
 arr2 = np.array([4, 5, 6])
 
 arr = np.dstack((arr1, arr2))
 
-print(arr)
+# print(arr)
+
+# Split the array in 3 parts:
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+newarr = np.array_split(arr, 3)
+
+# print(newarr) # Note: The return value is a list containing three arrays.
+
+# Split the array in 4 parts:
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+newarr = np.array_split(arr, 4)
+
+# print(newarr)
+
+# Access the splitted arrays:
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+newarr = np.array_split(arr, 3)
+
+# print(newarr[0])
+# print(newarr[1])
+# print(newarr[2])
+
+# Split the 2-D array into three 2-D arrays.
+arr = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+
+newarr = np.array_split(arr, 3)
+
+# print(newarr) # The example above returns three 2-D arrays.
+
+# Split the 2-D array into three 2-D arrays.
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+newarr = np.array_split(arr, 3)
+
+# print(newarr)
+
+# Split the 2-D array into three 2-D arrays along columns.
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+newarr = np.array_split(arr, 3, axis=1)
+
+# print(newarr)
+
+# Use the hsplit() method to split the 2-D array into three 2-D arrays along columns.
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+newarr = np.hsplit(arr, 3)
+
+# print(newarr)
+
+# Find the indexes where the value is 4:
+arr = np.array([1, 2, 3, 4, 5, 4, 4])
+
+x = np.where(arr == 4)
+
+# print(x)
+
+# Find the indexes where the values are odd:
+arr = np.array([10, 14, 93, 41, 8, 7])
+
+x = np.where(arr%2 == 1)
+
+# print(x)
+
+# Find the indexes where the values are even:
+arr = np.array([10, 14, 93, 41, 8, 7])
+
+x = np.where(arr%2 == 0)
+
+# print(x)
+
+# Find the indexes where the value 7 should be inserted:
+arr = np.array([6, 7, 8, 9])
+
+x = np.searchsorted(arr, 7)
+
+# print(x) # The method starts the search from the left and returns the first index where the number 7 is no longer larger than the next value.
+
+# Find the indexes where the value 7 should be inserted, starting from the right:
+arr = np.array([6, 7, 8, 9])
+
+x = np.searchsorted(arr, 7, side='right')
+
+# print(x) 
+
+# Find the indexes where the values 2, 4, and 6 should be inserted:
+arr = np.array([1, 3, 5, 7])
+
+x = np.searchsorted(arr, [2, 4, 6])
+
+print(x)

@@ -241,3 +241,35 @@ Joining Arrays Using Stack Functions
 * NumPy provides a helper function: dstack() to stack along height, which is the same as depth.
 
 
+NumPy Splitting Array
+
+* Splitting NumPy Arrays
+* Splitting is reverse operation of Joining.
+* Joining merges multiple arrays into one and Splitting breaks one array into multiple.
+* We use array_split() for splitting arrays, we pass it the array we want to split and the number of splits.
+* If the array has less elements than required, it will adjust from the end accordingly.
+* Note: We also have the method split() available but it will not adjust the elements when elements are less in source array for splitting like in example above, array_split() worked properly but split() would fail.
+
+Split Into Arrays
+* The return value of the array_split() method is a list containing each of the split as an array.
+* If you split an array into 3 arrays, you can access them from the result just like any array element.
+
+Splitting 2-D Arrays
+* Use the same syntax when splitting 2-D arrays.
+* Use the array_split() method, pass in the array you want to split and the number of splits you want to do.
+* Note: Similar alternates to vstack() and dstack() are available as vsplit() and dsplit().
+
+NumPy Searching Arrays
+
+Searching Arrays
+* You can search an array for a certain value, and return the indexes that get a match.
+* To search an array, use the where() method.
+
+Search Sorted
+* There is a method called searchsorted() which performs a binary search in the array, and returns the index where the specified value would be inserted to maintain the search order.
+* The searchsorted() method is assumed to be used on sorted arrays.
+* By default the left most index is returned, but we can give side='right' to return the right most index instead.
+
+Multiple Values
+* To search for more than one value, use an array with the specified values.
+
