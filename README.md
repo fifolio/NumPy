@@ -273,3 +273,12 @@ Search Sorted
 Multiple Values
 * To search for more than one value, use an array with the specified values.
 
+NumPy Sorting Arrays
+
+Sorting Arrays
+* Sorting means putting elements in an ordered sequence.
+* Ordered sequence is any sequence that has an order corresponding to elements, like numeric or alphabetical, ascending or descending.
+* The NumPy ndarray object has a function called sort(), that will sort a specified array.
+* Note: This method returns a copy of the array, leaving the original array unchanged.
+* You can also sort arrays of strings, or any other data type.
+
