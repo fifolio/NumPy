@@ -345,3 +345,57 @@ Seaborn
 Displots
 * Displot stands for distribution plot, it takes as input an array and plots a curve corresponding to the distribution of points in the array.
 
+Normal (Gaussian) Distribution
+
+Normal Distribution
+
+* The Normal Distribution is one of the most important distributions.
+* It is also called the Gaussian Distribution after the German mathematician Carl Friedrich Gauss.
+* It fits the probability distribution of many events, eg. IQ Scores, Heartbeat etc.
+* Use the random.normal() method to get a Normal Data Distribution.
+* It has three parameters:
+* loc - (Mean) where the peak of the bell exists.
+* scale - (Standard Deviation) how flat the graph distribution should be.
+* size - The shape of the returned array.
+* Note: The curve of a Normal Distribution is also known as the Bell Curve because of the bell-shaped curve.
+
+Binomial Distribution
+
+* Binomial Distribution is a Discrete Distribution.
+* It describes the outcome of binary scenarios, e.g. toss of a coin, it will either be head or tails.
+* It has three parameters:
+* n - number of trials.
+* p - probability of occurrence of each trial (e.g. for toss of a coin 0.5 each).
+* size - The shape of the returned array.
+* Discrete Distribution:The distribution is defined at separate set of events, e.g. a coin toss's result is discrete as it can be only head or tails whereas height of people is continuous as it can be 170, 170.1, 170.11 and so on.
+
+Poisson Distribution
+
+* Poisson Distribution is a Discrete Distribution.
+* It estimates how many times an event can happen in a specified time. e.g. If someone eats twice a day what is the probability he will eat thrice?
+* It has two parameters:
+* lam - rate or known number of occurrences e.g. 2 for above problem.
+* size - The shape of the returned array.
+
+---
+
+What are ufuncs? 
+* ufuncs stands for "Universal Functions" and they are NumPy functions that operate on the ndarray object.
+
+Why use ufuncs?
+* ufuncs are used to implement vectorization in NumPy which is way faster than iterating over elements.
+* They also provide broadcasting and additional methods like reduce, accumulate etc. that are very helpful for computation.
+* ufuncs also take additional arguments, like:
+* where boolean array or condition defining where the operations should take place.
+* dtype defining the return type of elements.
+* out output array where the return value should be copied.
+
+What is Vectorization?
+* Converting iterative statements into a vector based operation is called vectorization. 
+* It is faster as modern CPUs are optimized for such operations.
+
+Add the Elements of Two Lists
+* list 1: [1, 2, 3, 4]
+* list 2: [4, 5, 6, 7]
+* One way of doing it is to iterate over both of the lists and then sum each elements.
+

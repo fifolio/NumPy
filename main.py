@@ -599,4 +599,63 @@ arr = np.array([1, 2, 3, 4, 5])
 # print(random.permutation(arr))
 
 sns.displot([0, 1, 2, 3, 4, 5])
-plt.savefig("plot.png")
+# plt.savefig("plot.png")
+
+# Generate a random normal distribution of size 2x3:
+x = random.normal(size=(2, 3))
+# print(x)
+
+# Generate a random normal distribution of size 2x3 with mean at 1 and standard deviation of 2:
+x = random.normal(loc=1, scale=2, size=(2, 3))
+# print(x)
+
+# Visualization of Normal Distribution
+sns.displot(random.normal(size=1000), kind="kde")
+# plt.savefig("Visualization of Normal Distribution.png")
+
+# Given 10 trials for coin toss generate 10 data points:
+x = random.binomial(n=10, p=0.5, size=10)
+
+# print(x)
+
+# Visualization of Binomial Distribution
+sns.displot(random.binomial(n=10, p=0.5, size=1000))
+
+# plt.savefig("Visualization of Binomial Distribution.png")
+
+# Difference Between Normal and Binomial Distribution
+
+data = {
+  "normal": random.normal(loc=50, scale=5, size=1000),
+  "binomial": random.binomial(n=100, p=0.5, size=1000)
+}
+
+sns.displot(data, kind="kde")
+
+# plt.savefig("normal-binomial.png")
+
+# Generate a random 1x10 distribution for occurrence 2:
+x = random.poisson(lam=2, size=10)
+
+# print(x)
+
+# Visualization of Poisson Distribution
+sns.displot(random.poisson(lam=2, size=1000))
+
+# plt.savefig("Poisson Distribution.png")
+
+# Without ufunc, we can use Python's built-in zip() method:
+x = [1, 2, 3, 4]
+y = [4, 5, 6, 7]
+z = []
+
+for i, j in zip(x, y):
+  z.append(i + j)
+# print(z)
+
+# NumPy has a ufunc for this, called add(x, y) that will produce the same result.
+x = [1, 2, 3, 4]
+y = [4, 5, 6, 7]
+z = np.add(x, y)
+
+# print(z)
