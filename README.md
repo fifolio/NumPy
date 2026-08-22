@@ -340,4 +340,8 @@ Shuffling Arrays
 
 * The permutation() method returns a re-arranged array (and leaves the original array un-changed).
 
+Seaborn
+
+Displots
+* Displot stands for distribution plot, it takes as input an array and plots a curve corresponding to the distribution of points in the array.
 

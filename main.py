@@ -1,5 +1,7 @@
 import numpy as np
 from numpy import random
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Use a tuple to create a NumPy array:
 arr = np.array((1, 2, 3, 4, 5))
@@ -596,3 +598,5 @@ arr = np.array([1, 2, 3, 4, 5])
 
 # print(random.permutation(arr))
 
+sns.displot([0, 1, 2, 3, 4, 5])
+plt.savefig("plot.png")
